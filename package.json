@@ -1,0 +1,50 @@
+{
+  "name": "practice-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server",
+    "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha server/tests/*.test.js",
+    "test-client": "export NODE_ENV=test || SET \"NODE_ENV=test\" && karma start karma.conf.js",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-history-api-fallback": "^1.3.0",
+    "express": "^4.15.3",
+    "knex": "^0.13.0",
+    "pg": "^6.4.1",
+    "pug": "^2.0.0-rc.2",
+    "vue": "^2.4.1",
+    "vue-router": "^2.7.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-latest": "^6.24.1",
+    "chai": "^4.1.0",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "html-loader": "^0.4.5",
+    "html-webpack-plugin": "^2.29.0",
+    "karma": "^1.7.0",
+    "karma-chai": "^0.1.0",
+    "karma-coverage": "^1.1.1",
+    "karma-mocha": "^1.3.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-spec-reporter": "0.0.31",
+    "karma-webpack": "^2.0.4",
+    "mocha": "^3.4.2",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "supertest": "^3.0.0",
+    "vue-loader": "^12.2.2",
+    "vue-style-loader": "^3.0.1",
+    "vue-template-compiler": "^2.4.1",
+    "webpack": "^3.3.0"
+  }
+}
