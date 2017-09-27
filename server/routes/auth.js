@@ -64,5 +64,11 @@ router.post('/signup', async (request, response) => {
     }
 });
 
+router.get('/login', (request, response) => response.render('login'));
+
+// ------------------------------------------------------------------------------
+
 module.exports = router;
+
+// ------------------------------------------------------------------------------
 

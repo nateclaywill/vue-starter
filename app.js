@@ -91,7 +91,6 @@ app.all('*', (request, response, next) => {
     else {
         response.redirect(`https://${ request.hostname }:${ securePort }${ request.url }`);
     }
-
 });
 
 // Set path for static files

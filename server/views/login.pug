@@ -10,23 +10,20 @@ html
             a(href='/') Vend
             ul
                 li
-                    a(href='/auth/login') Login
+                    a(href='#') Login
                 li
-                    a(href='#') Signup
+                    a(href='/auth/signup') Signup
         main
-            form(action='/auth/signup' method='post' novalidate)
-                h2 Sign up
+            form(action='/auth/login' method='post' novalidate)
+                h2 Log in
 
                 label(for='username') Username
                 input(type='text' name='username' required)
 
-                label(for='email') Email
-                input(type='email' name='email' required)
-
                 label(for='password') Password
                 input(type='password' name='password' required)
 
-                input(type='submit' name='submit' value='Create account')
+                input(type='submit' name='submit' value='Log in')
 
                 p.
-                    Already have an account? #[a(href='/auth/login') Log in here.]
+                    Don't have an account? #[a(href='/auth/signup') Sign up here.]
