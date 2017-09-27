@@ -3,3 +3,5 @@ node_modules
 coverage
 public
 knexfile.js
+package-lock.json
+sslcert
