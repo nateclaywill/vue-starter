@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+        title Vend
+        meta(name='viewport' content="width=device-width, initial-scale=1")
+        link(href='/assets/styles.css' rel='stylesheet')
+
+    body
+        header
+            a(href='/') Vend
+            ul
+                li
+                    a(href='#') Login
+                li
+                    a(href='#') Signup
+        main
+            form(action='/auth/signup' method='post' novalidate)
+                h2 Sign up
+
+                label(for='username') Username
+                input(type='text' name='username' required)
+
+                label(for='email') Email
+                input(type='email' name='email' required)
+
+                label(for='password') Password
+                input(type='password' name='password' required)
+
+                input(type='submit' name='submit' value='Create account')
+
+                p.
+                    Already have an account? #[a(href='#') Log in here.]

@@ -11,7 +11,7 @@ module.exports = {
         client: 'pg',
         connection: {
             host: 'localhost',
-            database: 'starter',
+            database: 'vend_tracker',
             user: 'postgres'
         },
         migrations: {
@@ -23,7 +23,7 @@ module.exports = {
         client: 'pg',
         connection: {
             host: 'localhost',
-            database: 'starter_test',
+            database: 'vend_tracker_test',
             user: 'postgres'
         },
         migrations: {

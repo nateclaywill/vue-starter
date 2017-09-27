@@ -1,3 +1,157 @@
+$primary: #005e66;
+$lightgray: #faffff;
+$darkgray: #080b0d;
+
+$basefont: "Helvetica Neue", sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: $basefont;
+  margin: 0;
+  background: $lightgray;
+  font-size: 62.5%;
+  font-weight: 300;
+}
+
+h1, h2 {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 2.13625rem;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  color: #505959;
+  font-size: 1.70875rem;
+}
+
+p {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 4em;
+}
+
+header {
+  background: $primary;
+  color: $lightgray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 2em;
+  justify-content: space-between;
+  padding: 0 2em;
+  font-size: 1.70875rem;
+}
+
+header > a {
+  color: $lightgray;
+  font-size: 1.70875rem;
+}
+
+main {
+  margin: 5em 10em 0;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font-size: 1.3675rem;
+}
+
+li + li {
+  margin-left: 1em;
+}
+
+a {
+  color: $lightgray;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button, input[type=submit] {
+  background: $primary;
+  border-radius: 4px;
+  border: 2px solid $primary;
+  color: $lightgray;
+  padding: 0.5em 2em;
+  font-size: 1.25rem;
+  font-family: $basefont;
+  font-weight: bold;
+  margin-top: 2em;
+  letter-spacing: 0.75px;
+  transition: background 0.1s, border-color 0.2s;
+}
+
+button:hover, input[type=submit]:hover {
+  cursor: pointer;
+  background: #007580;
+  border-color: #007580;
+}
+
+button:active, button:focus, input[type=submit]:active, input[type=submit]:focus {
+  background: #00464D;
+  border-color: #00464D;
+  outline: none;
+}
+
+form {
+  background: #f0f7f7;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px #e1e6e6;
+  padding: 6em 12em 1em;
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form h2 {
+  text-align: center;
+  color: $darkgray;
+}
+
+form a {
+  color: $primary;
+  font-weight: bold;
+}
+
+label {
+  font-size: 1rem;
+  margin-top: 3em;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  border-radius: 5px;
+  border: 2px solid $lightgray;
+  background-color: $lightgray;
+  font-size: 1.25rem;
+  padding: 0.5em;
+  margin-top: 6px;
+  box-shadow: 0 4px 8px #dee1e3;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+  box-shadow: 0 0 4px #008c99;
+  border-color: #008c99;
+  outline: none;
+}
+
+form input[type=submit] {
+  align-self: center;
+  margin-top: 3em;
 }
