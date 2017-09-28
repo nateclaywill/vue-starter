@@ -1,7 +1,7 @@
 // ------------------------------------------------------------------------------
-// server.js
+// app.js
 //
-// Setup and run express application.
+// Setup express application and configure routing.
 // ------------------------------------------------------------------------------
 
 // Node modules
@@ -25,6 +25,7 @@ const userService = require('./server/services/user');
 
 const passportOptions = {};
 
+// Extract JWT token from the cookie
 passportOptions.jwtFromRequest = function (request) {
     let token = null;
 
@@ -35,11 +36,14 @@ passportOptions.jwtFromRequest = function (request) {
     return token;
 };
 
+// TODO: Move secret to local environment config
 passportOptions.secretOrKey = 'This is a development secret';
 
+// Get id from token, and try to find a matching user
+// If no user is found, the request is not authorized
 const strategy = new Strategy(passportOptions, async (payload, done) => {
     try {
-        let user = userService.findById(payload.id);
+        let user = await userService.findById(payload.id);
 
         if (user) {
             done(null, user.getCleanObject());
@@ -71,6 +75,7 @@ app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+// Parse cookies and add to request
 app.use(cookieParser());
 
 // ------------------------------------------------------------------------------
